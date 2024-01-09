@@ -3,7 +3,7 @@ from django.db import models
 class Category(models.Model):
     name = models.CharField(max_length=50)
     featured_cocktail = models.ForeignKey(
-        'Cocktail', on_delete=models.SET_NULL, null=True, related_name='+', blank=True)
+        "Cocktail", on_delete=models.SET_NULL, null=True, related_name="+", blank=True)
 
     def __str__(self) -> str:
         return self.name
